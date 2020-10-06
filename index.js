@@ -35,3 +35,15 @@ function creaRettangolo(x, y, width, height, isSelected = false) {
   // attach container to document
   return divEl;
 }
+function creaMuletto(x, y) {
+  const muletto = document.createElement("img");
+  muletto.setAttribute("src", "./img/fork.png");
+  muletto.style.width = "100%";
+  const div = document.createElement("div");
+  div.setAttribute("id", "muletto");
+  div.style.top = `${y}%`;
+  div.style.left = `${x + 10}%`;
+  div.classList.add("muletto");
+  div.appendChild(muletto);
+  return div;
+}

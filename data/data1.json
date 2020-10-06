@@ -2,50 +2,50 @@
   {
     "x": 1,
     "y": 1,
-    "dimX": 5,
-    "dimY": 5,
+    "dimX": 3,
+    "dimY": 2,
     "isSelected": false
   },
   {
     "x": 1,
     "y": 60,
-    "dimX": 5,
-    "dimY": 5,
+    "dimX": 3,
+    "dimY": 2,
     "isSelected": false
   },
   {
     "x": 1,
     "y": 10,
-    "dimX": 5,
-    "dimY": 5,
+    "dimX": 3,
+    "dimY": 2,
     "isSelected": false
   },
   {
     "x": 80,
     "y": 1,
-    "dimX": 5,
-    "dimY": 5,
+    "dimX": 3,
+    "dimY": 2,
     "isSelected": false
   },
   {
-    "x": 345,
+    "x": 60,
     "y": 1,
-    "dimX": 5,
-    "dimY": 5,
+    "dimX": 3,
+    "dimY": 2,
     "isSelected": false
   },
   {
     "x": 90,
     "y": 17,
-    "dimX": 5,
-    "dimY": 5,
+    "dimX": 3,
+    "dimY": 2,
     "isSelected": true
   },
   {
-    "x": 100,
+    "x": 9,
     "y": 10,
-    "dimX": 5,
-    "dimY": 5,
+    "dimX": 3,
+    "dimY": 2,
     "isSelected": false
   }
 ]

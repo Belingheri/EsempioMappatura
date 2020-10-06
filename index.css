@@ -1,9 +1,14 @@
 .svg-container {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 10%;
+  width: 90%;
   height: 100%;
+}
+.muletto {
+  position: absolute;
+  width: 3%;
+  z-index: 300;
 }
 .rectange {
   fill: rgb(211, 99, 164);

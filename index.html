@@ -7,6 +7,7 @@
   />
 
   <link href="index.css" rel="stylesheet" />
+  <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
   <script type="text/javascript" src="data/data1.json"></script>
   <script
     type="text/javascript"
@@ -15,7 +16,12 @@
   <script src="index.js"></script>
 </head>
 <body>
-  <div id="mappatura"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm"><h1>Data</h1></div>
+      <div id="mappatura"></div>
+    </div>
+  </div>
   <script>
     $.getJSON("./data/data1.json", (data) => {
       $.each(data, (key, val) => {
@@ -29,5 +35,24 @@
         document.getElementById("mappatura").appendChild(el);
       });
     });
+    const muletto = creaMuletto(20, 80);
+    document.getElementById("mappatura").appendChild(muletto);
+
+    var interval = setInterval(() => {
+      const movX = 1;
+      const movY = 2;
+      const muletto = document.getElementById("muletto");
+      const oldY = muletto.style.top.split("%")[0] * 1;
+      const oldX = muletto.style.left.split("%")[0] * 1;
+      if (oldY - movY < 17 && oldX + movX >= 90) {
+        clearInterval(interval);
+      }
+      if (oldX + movX < 90) {
+        muletto.style.left = `${oldX + movX}%`;
+      }
+      if (oldY + movY > 17) {
+        muletto.style.top = `${oldY - movY}%`;
+      }
+    }, 150);
   </script>
 </body>
