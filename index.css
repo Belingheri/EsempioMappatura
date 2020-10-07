@@ -28,3 +28,6 @@ div.billetta {
   position: absolute;
   z-index: 299;
 }
+.hidden {
+  display: none;
+}

@@ -1,15 +1,4 @@
 function creaRettangolo(x, y, width, height, isSelected = false) {
-  /*
-     <svg width="100%" height="100%">
-        <rect
-          x="342"
-          y="0"
-          width="150"
-          height="150"
-          class="rectange rectange-selected"
-        />
-      </svg>
-    */
   const divEl = document.createElement("div");
   divEl.setAttribute("class", "svg-container");
   // create the svg element
@@ -35,12 +24,12 @@ function creaRettangolo(x, y, width, height, isSelected = false) {
   // attach container to document
   return divEl;
 }
-function creaMuletto(x, y) {
+function creaMuletto(x, y, isMy = false) {
   const muletto = document.createElement("img");
-  muletto.setAttribute("src", "./img/fork.png");
+  muletto.setAttribute("src", `./img/fork${isMy ? "-selected" : ""}.png`);
   muletto.style.width = "100%";
   const div = document.createElement("div");
-  div.setAttribute("id", "muletto");
+  if (isMy) div.setAttribute("id", "muletto");
   div.style.top = `${y}%`;
   div.style.left = `${x + 10}%`;
   div.classList.add("muletto");
@@ -60,4 +49,83 @@ function depositaBilletta(x, y, width, height, isSelected = false) {
   div.classList.add("billetta");
   div.appendChild(bil);
   return div;
+}
+function depositaCerchio(x, y, width, isSelected = false) {
+  const bil = document.createElement("img");
+  bil.setAttribute("src", `./img/circle${isSelected ? "-selected" : ""}.png`);
+  bil.style.width = `100%`;
+  const div = document.createElement("div");
+  div.style.top = `${y}%`;
+
+  div.style.left = `${((x + 10) / 100) * 90}%`;
+  div.style.width = `${width}%`;
+  div.classList.add("billetta");
+  div.appendChild(bil);
+  return div;
+}
+function goNext(data, index) {
+  $("#muletto").animate(
+    {
+      opacity: 0.5,
+      top: `${data[index].y}%`,
+      left: `${data[index].x}%`,
+    },
+    data[index].milliSec,
+    () => {
+      if (data.length == index + 1) {
+        arrivatoADest();
+        return;
+      }
+      goNext(data, index + 1);
+    }
+  );
+}
+function arrivatoADest() {
+  const button = document.createElement("button");
+  button.setAttribute("id", "vedi-dett");
+  button.setAttribute("button", "button");
+  button.classList.add("btn");
+  button.classList.add("btn-success");
+  button.innerHTML = "Vedi prelievo";
+  button.onclick = () => {
+    vediDett();
+  };
+  document.getElementById("info").appendChild(button);
+}
+function rigaSelezionata() {
+  const valore = document.getElementById("inputGroupSelect04").value;
+  lanciaProgetto(`./data/${valore}.json`);
+}
+function lanciaProgetto(path) {
+  document.getElementById("iniziale").classList.add("hidden");
+  document.getElementById("divmappa").classList.remove("hidden");
+  $.getJSON(path, (data) => {
+    data.magazzino.forEach((element) => {
+      const el = depositaBilletta(
+        element.x,
+        element.y,
+        element.dimX,
+        element.dimY,
+        element.isSelected
+      );
+      document.getElementById("mappatura").appendChild(el);
+    });
+    goNext(data.strada, 0);
+  });
+  const muletto = creaMuletto(0, 65, true);
+  document.getElementById("mappatura").appendChild(muletto);
+  document.getElementById("mappatura").appendChild(creaMuletto(17, 45));
+  document.getElementById("mappatura").appendChild(creaMuletto(50, 13));
+}
+function vediDett() {
+  const valore = document.getElementById("inputGroupSelect04").value;
+  const path = `./data/${valore}.json`;
+  document.getElementById("vero-magaz").classList.add("hidden");
+  document.getElementById("vedi-dett").classList.remove("hidden");
+  $.getJSON(path, (data) => {
+    data.davanti.forEach((el) => {
+      const newEl = depositaCerchio(el.x, el.y, el.width, el.isSelected);
+      document.getElementById("vedi-dett").appendChild(newEl);
+    });
+  });
 }

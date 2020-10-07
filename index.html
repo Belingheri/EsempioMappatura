@@ -16,45 +16,62 @@
   <script src="index.js"></script>
 </head>
 <body>
-  <div class="container-fluid">
+  <div class="container" id="iniziale">
+    <br />
     <div class="row">
-      <div>
-        <img src="./img/mappa.png" alt="Mappatura" class="sfondo-mappatura" />
+      <div class="col-7">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Ordine</span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Username"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+            value="7892FCi"
+            disabled
+          />
+        </div>
+        <div class="input-group">
+          <select class="custom-select" id="inputGroupSelect04">
+            <option value="data1">One</option>
+            <option value="data2">Two</option>
+            <option value="data3">Three</option>
+          </select>
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              onClick="rigaSelezionata();"
+            >
+              Cerca
+            </button>
+          </div>
+        </div>
       </div>
-      <div id="mappatura"></div>
     </div>
   </div>
-  <script>
-    $.getJSON("./data/data1.json", (data) => {
-      data.forEach((element) => {
-        const el = depositaBilletta(
-          element.x,
-          element.y,
-          element.dimX,
-          element.dimY,
-          element.isSelected
-        );
-        document.getElementById("mappatura").appendChild(el);
-      });
-    });
-    const muletto = creaMuletto(0, 80);
-    document.getElementById("mappatura").appendChild(muletto);
-
-    var interval = setInterval(() => {
-      const movX = 1;
-      const movY = 2;
-      const muletto = document.getElementById("muletto");
-      const oldY = muletto.style.top.split("%")[0] * 1;
-      const oldX = muletto.style.left.split("%")[0] * 1;
-      if (oldY - movY < 17 && oldX + movX >= 90) {
-        clearInterval(interval);
-      }
-      if (oldX + movX < 90) {
-        muletto.style.left = `${oldX + movX}%`;
-      }
-      if (oldY + movY > 17) {
-        muletto.style.top = `${oldY - movY}%`;
-      }
-    }, 150);
-  </script>
+  <div class="container-fluid hidden" id="divmappa">
+    <div class="row">
+      <div id="info">
+        <button type="button" class="btn btn-primary">
+          Carico <span class="badge badge-light">632541</span></button
+        ><br />
+        <button type="button" class="btn btn-secondary">
+          Articolo <br /><span class="badge badge-light">AGH 89384 X45</span>
+        </button>
+        <br /><br />
+      </div>
+      <div id="vero-magaz">
+        <div>
+          <img src="./img/mappa.png" alt="Mappatura" class="sfondo-mappatura" />
+        </div>
+        <div id="mappatura"></div>
+      </div>
+      <div id="vedi-dett" class="hidden"></div>
+    </div>
+  </div>
+  <script></script>
 </body>
