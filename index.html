@@ -27,6 +27,7 @@
           <input
             type="text"
             class="form-control"
+            id="inOrdine"
             placeholder="Username"
             aria-label="Username"
             aria-describedby="basic-addon1"
@@ -36,9 +37,9 @@
         </div>
         <div class="input-group">
           <select class="custom-select" id="inputGroupSelect04">
-            <option value="data1">One</option>
-            <option value="data2">Two</option>
-            <option value="data3">Three</option>
+            <option value="data1">AGH 89384 X45</option>
+            <option value="data2">FFT 84390 X05</option>
+            <option value="data3">MON 02385 X97</option>
           </select>
           <div class="input-group-append">
             <button
@@ -57,10 +58,13 @@
     <div class="row">
       <div id="info">
         <button type="button" class="btn btn-primary">
-          Carico <span class="badge badge-light">632541</span></button
+          Carico
+          <span class="badge badge-light" id="ordine"> 632541</span></button
         ><br />
         <button type="button" class="btn btn-secondary">
-          Articolo <br /><span class="badge badge-light">AGH 89384 X45</span>
+          Articolo <br /><span class="badge badge-light" id="articolo"
+            >AGH 89384 X45</span
+          >
         </button>
         <br /><br />
       </div>

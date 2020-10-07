@@ -12,7 +12,7 @@
       "y": 1,
       "dimX": 5,
       "dimY": 2,
-      "isSelected": true
+      "isSelected": false
     },
     {
       "x": 90,
@@ -572,7 +572,7 @@
       "y": 80,
       "dimX": 5,
       "dimY": 2,
-      "isSelected": false
+      "isSelected": true
     },
     {
       "x": 12,
@@ -583,8 +583,8 @@
     }
   ],
   "strada": [
-    { "x": 85, "y": 65, "milliSec": 3000 },
-    { "x": 87, "y": 3, "milliSec": 2000 }
+    { "x": 24, "y": 65, "milliSec": 2000 },
+    { "x": 29, "y": 80, "milliSec": 2000 }
   ],
   "davanti": [
     { "x": 10, "y": 50, "width": 20, "isSelected": false },

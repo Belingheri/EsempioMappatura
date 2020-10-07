@@ -93,8 +93,13 @@ function arrivatoADest() {
   document.getElementById("info").appendChild(button);
 }
 function rigaSelezionata() {
-  const valore = document.getElementById("inputGroupSelect04").value;
-  lanciaProgetto(`./data/${valore}.json`);
+  const sel = document.getElementById("inputGroupSelect04");
+  document.getElementById("ordine").innerHTML = document.getElementById(
+    "inOrdine"
+  ).value;
+  document.getElementById("articolo").innerHTML =
+    sel.options[sel.selectedIndex].text;
+  lanciaProgetto(`./data/${sel.value}.json`);
 }
 function lanciaProgetto(path) {
   document.getElementById("iniziale").classList.add("hidden");
@@ -118,8 +123,13 @@ function lanciaProgetto(path) {
   document.getElementById("mappatura").appendChild(creaMuletto(50, 13));
 }
 function vediDett() {
-  const valore = document.getElementById("inputGroupSelect04").value;
-  const path = `./data/${valore}.json`;
+  const sel = document.getElementById("inputGroupSelect04");
+  const path = `./data/${sel.value}.json`;
+  const button = document.getElementById("vedi-dett");
+  button.innerHTML = "Confema presa";
+  button.onclick = () => {
+    location.reload();
+  };
   document.getElementById("vero-magaz").classList.add("hidden");
   document.getElementById("vedi-dett").classList.remove("hidden");
   $.getJSON(path, (data) => {
