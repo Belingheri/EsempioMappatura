@@ -588,6 +588,8 @@
   ],
   "davanti": [
     { "x": 10, "y": 50, "width": 20, "isSelected": false },
-    { "x": 30, "y": 50, "width": 20, "isSelected": true }
+    { "x": 30, "y": 50, "width": 20, "isSelected": true },
+    { "x": 50, "y": 50, "width": 20, "isSelected": false },
+    { "x": 70, "y": 50, "width": 20, "isSelected": false }
   ]
 }
