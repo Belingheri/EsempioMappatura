@@ -26,18 +26,18 @@
   </div>
   <script>
     $.getJSON("./data/data1.json", (data) => {
-      $.each(data, (key, val) => {
-        const el = creaRettangolo(
-          val.x,
-          val.y,
-          val.dimX,
-          val.dimY,
-          val.isSelected
+      data.forEach((element) => {
+        const el = depositaBilletta(
+          element.x,
+          element.y,
+          element.dimX,
+          element.dimY,
+          element.isSelected
         );
         document.getElementById("mappatura").appendChild(el);
       });
     });
-    const muletto = creaMuletto(20, 80);
+    const muletto = creaMuletto(0, 80);
     document.getElementById("mappatura").appendChild(muletto);
 
     var interval = setInterval(() => {

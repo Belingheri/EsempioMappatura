@@ -5,7 +5,7 @@
   width: 90%;
   height: 100%;
 }
-.muletto {
+div.muletto {
   position: absolute;
   width: 3%;
   z-index: 300;
@@ -23,4 +23,8 @@
   left: 10%;
   width: 90%;
   height: 100%;
+}
+div.billetta {
+  position: absolute;
+  z-index: 299;
 }

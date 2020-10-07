@@ -47,3 +47,17 @@ function creaMuletto(x, y) {
   div.appendChild(muletto);
   return div;
 }
+function depositaBilletta(x, y, width, height, isSelected = false) {
+  const bil = document.createElement("img");
+  if (!isSelected) bil.setAttribute("src", "./img/line.png");
+  else bil.setAttribute("src", "./img/line_selected.png");
+  bil.style.width = `100%`;
+  const div = document.createElement("div");
+  div.style.top = `${y}%`;
+
+  div.style.left = `${((x + 10) / 100) * 90}%`;
+  div.style.width = `${width}%`;
+  div.classList.add("billetta");
+  div.appendChild(bil);
+  return div;
+}
