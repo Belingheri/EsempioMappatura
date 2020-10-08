@@ -12,7 +12,7 @@
       "y": 1,
       "dimX": 5,
       "dimY": 2,
-      "isSelected": true
+      "isSelected": false
     },
     {
       "x": 90,
@@ -194,7 +194,7 @@
       "y": 33,
       "dimX": 5,
       "dimY": 2,
-      "isSelected": false
+      "isSelected": true
     },
     {
       "x": 70,
@@ -583,13 +583,20 @@
     }
   ],
   "strada": [
-    { "x": 85, "y": 65, "milliSec": 3000 },
-    { "x": 87, "y": 3, "milliSec": 2000 }
+    { "x": 48, "y": 63, "milliSec": 2000 },
+    { "x": 51, "y": 15, "milliSec": 2000 },
+    { "x": 65, "y": 15, "milliSec": 2000 },
+    { "x": 69, "y": 34, "milliSec": 2000 }
   ],
   "davanti": [
-    { "x": 10, "y": 50, "width": 20, "isSelected": false },
-    { "x": 30, "y": 50, "width": 20, "isSelected": true },
-    { "x": 50, "y": 50, "width": 20, "isSelected": false },
-    { "x": 70, "y": 50, "width": 20, "isSelected": false }
+    { "x": 10, "y": 59, "width": 20, "isSelected": false },
+    { "x": 30, "y": 59, "width": 20, "isSelected": false },
+    { "x": 50, "y": 59, "width": 20, "isSelected": false },
+    { "x": 70, "y": 59, "width": 20, "isSelected": false },
+    { "x": 60, "y": 30, "width": 20, "isSelected": false },
+    { "x": 40, "y": 30, "width": 20, "isSelected": false },
+    { "x": 20, "y": 30, "width": 20, "isSelected": false },
+    { "x": 30, "y": 0, "width": 20, "isSelected": true },
+    { "x": 50, "y": 0, "width": 20, "isSelected": false }
   ]
 }
