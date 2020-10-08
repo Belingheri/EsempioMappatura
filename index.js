@@ -120,7 +120,7 @@ function lanciaProgetto(path) {
   const muletto = creaMuletto(0, 65, true);
   document.getElementById("mappatura").appendChild(muletto);
   document.getElementById("mappatura").appendChild(creaMuletto(17, 45));
-  document.getElementById("mappatura").appendChild(creaMuletto(50, 13));
+  document.getElementById("mappatura").appendChild(creaMuletto(40, 80));
 }
 function vediDett() {
   const sel = document.getElementById("inputGroupSelect04");
