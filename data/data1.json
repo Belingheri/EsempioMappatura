@@ -587,9 +587,33 @@
     { "x": 87, "y": 3, "milliSec": 2000 }
   ],
   "davanti": [
-    { "x": 10, "y": 50, "width": 20, "isSelected": false },
-    { "x": 30, "y": 50, "width": 20, "isSelected": true },
-    { "x": 50, "y": 50, "width": 20, "isSelected": false },
-    { "x": 70, "y": 50, "width": 20, "isSelected": false }
+    {
+      "x": 10,
+      "y": 50,
+      "width": 20,
+      "isSelected": false,
+      "text": "SDS 73849 DFD"
+    },
+    {
+      "x": 30,
+      "y": 50,
+      "width": 20,
+      "isSelected": true,
+      "text": "AGH 89384 X45"
+    },
+    {
+      "x": 50,
+      "y": 50,
+      "width": 20,
+      "isSelected": false,
+      "text": "YLF 64787 NNM"
+    },
+    {
+      "x": 70,
+      "y": 50,
+      "width": 20,
+      "isSelected": false,
+      "text": "QWE 36547 LKJ"
+    }
   ]
 }

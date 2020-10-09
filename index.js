@@ -92,18 +92,39 @@ function arrivatoADest() {
   };
   document.getElementById("info").appendChild(button);
 }
-function rigaSelezionata() {
+function rigaSelezionata(apri3D) {
   const sel = document.getElementById("inputGroupSelect04");
   document.getElementById("ordine").innerHTML = document.getElementById(
     "inOrdine"
   ).value;
   document.getElementById("articolo").innerHTML =
     sel.options[sel.selectedIndex].text;
-  lanciaProgetto(`./data/${sel.value}.json`);
-}
-function lanciaProgetto(path) {
+  if (apri3D) {
+    window.open(
+      `./3d/examples/webgl_loader_kmz.html?file=${sel.value}`,
+      "_blank",
+      "toolbar=yes,scrollbars=no,resizable=yes,top=20,left=20,width=1200,height=900"
+    );
+    const newButton = document.createElement("button");
+    newButton.classList.add("btn");
+    newButton.classList.add("btn-warning");
+    newButton.innerHTML = "Parti >";
+    newButton.id = "StartSimulazione";
+    newButton.onclick = () => {
+      document.getElementById("StartSimulazione").remove();
+      lanciaProgetto(
+        `./data/${document.getElementById("inputGroupSelect04").value}.json`
+      );
+    };
+
+    document.getElementById("info").appendChild(newButton);
+  } else {
+    lanciaProgetto(`./data/${sel.value}.json`);
+  }
   document.getElementById("iniziale").classList.add("hidden");
   document.getElementById("divmappa").classList.remove("hidden");
+}
+function lanciaProgetto(path) {
   $.getJSON(path, (data) => {
     data.magazzino.forEach((element) => {
       const el = depositaBilletta(
@@ -135,6 +156,17 @@ function vediDett() {
   $.getJSON(path, (data) => {
     data.davanti.forEach((el) => {
       const newEl = depositaCerchio(el.x, el.y, el.width, el.isSelected);
+      if (el.text) {
+        const p = document.createElement("p");
+        p.classList.add("text-billetta");
+        const span = document.createElement("span");
+        span.classList.add("badge");
+        if (el.isSelected) span.classList.add("badge-primary");
+        else span.classList.add("badge-secondary");
+        span.innerHTML = el.text;
+        p.appendChild(span);
+        newEl.appendChild(p);
+      }
       document.getElementById("vedi-dett").appendChild(newEl);
     });
   });

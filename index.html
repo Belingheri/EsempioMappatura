@@ -19,7 +19,7 @@
   <div class="container" id="iniziale">
     <br />
     <div class="row">
-      <div class="col-7">
+      <div class="col-12">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Ordine</span>
@@ -34,20 +34,55 @@
             value="7892FCi"
             disabled
           />
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Riga</span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            id="inRiga"
+            aria-describedby="basic-addon1"
+            value="2"
+            disabled
+          />
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Cliente</span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            id="inCliente"
+            aria-describedby="basic-addon1"
+            value="Acme Spa."
+            disabled
+          />
         </div>
         <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Colata</span>
+          </div>
           <select class="custom-select" id="inputGroupSelect04">
             <option value="data1">AGH 89384 X45</option>
             <option value="data2">FFT 84390 X05</option>
             <option value="data3">MON 02385 X97</option>
           </select>
+
           <div class="input-group-append">
             <button
               class="btn btn-outline-secondary"
               type="button"
-              onClick="rigaSelezionata();"
+              onClick="rigaSelezionata(false);"
             >
               Cerca
+            </button>
+          </div>
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              onClick="rigaSelezionata(true);"
+            >
+              Cerca e Vedi 3D
             </button>
           </div>
         </div>
@@ -58,11 +93,18 @@
     <div class="row">
       <div id="info">
         <button type="button" class="btn btn-primary">
-          Carico
+          Ordine
           <span class="badge badge-light" id="ordine"> 632541</span></button
         ><br />
+        <button type="button" class="btn btn-info">
+          Riga N:
+          <span class="badge badge-light" id="ordine">2</span></button
+        ><br /><button type="button" class="btn btn-dark">
+          Cliente
+          <span class="badge badge-light" id="ordine">Acme Spa</span></button
+        ><br />
         <button type="button" class="btn btn-secondary">
-          Articolo <br /><span class="badge badge-light" id="articolo"
+          Colata <br /><span class="badge badge-light" id="articolo"
             >AGH 89384 X45</span
           >
         </button>

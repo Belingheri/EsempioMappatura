@@ -31,3 +31,8 @@ div.billetta {
 .hidden {
   display: none;
 }
+p.text-billetta {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}

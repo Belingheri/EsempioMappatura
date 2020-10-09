@@ -601,11 +601,47 @@
     { "x": 29, "y": 80, "milliSec": 2000 }
   ],
   "davanti": [
-    { "x": 10, "y": 50, "width": 20, "isSelected": false },
-    { "x": 30, "y": 50, "width": 20, "isSelected": false },
-    { "x": 50, "y": 50, "width": 20, "isSelected": false },
-    { "x": 70, "y": 50, "width": 20, "isSelected": false },
-    { "x": 60, "y": 20, "width": 20, "isSelected": false },
-    { "x": 40, "y": 20, "width": 20, "isSelected": true }
+    {
+      "x": 10,
+      "y": 50,
+      "width": 20,
+      "isSelected": false,
+      "text": "SDS 73849 DFD"
+    },
+    {
+      "x": 30,
+      "y": 50,
+      "width": 20,
+      "isSelected": false,
+      "text": "YLF 64787 NNM"
+    },
+    {
+      "x": 50,
+      "y": 50,
+      "width": 20,
+      "isSelected": false,
+      "text": "QWE 36547 LKJ"
+    },
+    {
+      "x": 70,
+      "y": 50,
+      "width": 20,
+      "isSelected": false,
+      "text": "AGH 89384 X45"
+    },
+    {
+      "x": 60,
+      "y": 20,
+      "width": 20,
+      "isSelected": false,
+      "text": "TYP 8521 TPL"
+    },
+    {
+      "x": 40,
+      "y": 20,
+      "width": 20,
+      "isSelected": true,
+      "text": "FFT 84390 X05"
+    }
   ]
 }
