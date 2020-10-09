@@ -592,63 +592,63 @@
     {
       "x": 10,
       "y": 59,
-      "width": 20,
+      "width": 18,
       "isSelected": false,
       "text": "SDS 73849 DFD"
     },
     {
       "x": 30,
       "y": 59,
-      "width": 20,
+      "width": 18,
       "isSelected": false,
       "text": "YLF 64787 NNM"
     },
     {
       "x": 50,
       "y": 59,
-      "width": 20,
+      "width": 18,
       "isSelected": false,
       "text": "QWE 36547 LKJ"
     },
     {
       "x": 70,
       "y": 59,
-      "width": 20,
+      "width": 18,
       "isSelected": false,
       "text": "AGH 89384 X45"
     },
     {
       "x": 60,
       "y": 30,
-      "width": 20,
+      "width": 18,
       "isSelected": false,
       "text": "TYP 8521 TPL"
     },
     {
       "x": 40,
       "y": 30,
-      "width": 20,
+      "width": 18,
       "isSelected": false,
       "text": "FFT 84390 X05"
     },
     {
       "x": 20,
       "y": 30,
-      "width": 20,
+      "width": 18,
       "isSelected": false,
       "text": "MKO 03214 LDK"
     },
     {
       "x": 30,
       "y": 0,
-      "width": 20,
+      "width": 18,
       "isSelected": true,
       "text": "MON 02385 X97"
     },
     {
       "x": 50,
       "y": 0,
-      "width": 20,
+      "width": 18,
       "isSelected": false,
       "text": "PPO 36547 TEK"
     }
