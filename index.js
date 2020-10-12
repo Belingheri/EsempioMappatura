@@ -82,7 +82,7 @@ function goNext(data, index) {
 }
 function arrivatoADest() {
   const button = document.createElement("button");
-  button.setAttribute("id", "vedi-dett");
+  button.setAttribute("id", "vedi-dett-btn");
   button.setAttribute("button", "button");
   button.classList.add("btn");
   button.classList.add("btn-success");
@@ -146,7 +146,7 @@ function lanciaProgetto(path) {
 function vediDett() {
   const sel = document.getElementById("inputGroupSelect04");
   const path = `./data/${sel.value}.json`;
-  const button = document.getElementById("vedi-dett");
+  const button = document.getElementById("vedi-dett-btn");
   button.innerHTML = "Confema presa";
   button.onclick = () => {
     location.reload();
