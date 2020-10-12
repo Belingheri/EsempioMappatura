@@ -99,9 +99,8 @@
             const loader2 = new GLTFLoader().setPath("models/gltf/Cilindro/");
             loader2.load(
               `cilindroP${element.isSelected ? "_selected" : ""}.gltf`,
-              function (gltfEl) {
+              (gltfEl) => {
                 //console.log("qui: ", gltfEl);
-                gltfEl.scene.position.z = 2;
                 gltfEl.scene.position.x = element.x / 2 - 25.5;
                 gltfEl.scene.position.z =
                   element.y / 2 !== 0 ? element.y / 2 - 25.5 : 0.5;
@@ -112,7 +111,15 @@
           });
         });
 
-        render();
+        const loader = new GLTFLoader().setPath("models/gltf/Muletto/");
+        loader.load(`muletto.gltf`, (gltfEl) => {
+          //console.log("qui: ", gltfEl);
+          gltfEl.scene.position.z = 5;
+          gltfEl.scene.position.x = -23;
+          scene.add(gltfEl.scene);
+          render();
+        });
+
         var controls = new OrbitControls(camera, renderer.domElement);
         controls.addEventListener("change", render);
         controls.update();
