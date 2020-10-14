@@ -101,7 +101,7 @@ function rigaSelezionata(apri3D) {
     sel.options[sel.selectedIndex].text;
   if (apri3D) {
     window.open(
-      `./3d/examples/webgl_loader_kmz.html?file=${sel.value}`,
+      `./3d/examples/main.html?file=${sel.value}`,
       "_blank",
       "toolbar=yes,scrollbars=no,resizable=yes,top=20,left=20,width=1200,height=900"
     );
